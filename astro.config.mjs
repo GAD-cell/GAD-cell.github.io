@@ -8,12 +8,5 @@ import path from "path"; // ✅ This is needed
 
 export default defineConfig({
   site: 'https://gad-cell.github.io/',
-  output: 'server',
   integrations: [mdx(), sitemap(), tailwind(), icon()],
-  adapter: netlify(),
-
-  // ✅ Add this alias section
-  alias: {
-    '@': path.resolve('./src'),
-  },
 });
