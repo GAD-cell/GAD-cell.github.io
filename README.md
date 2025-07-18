@@ -1,76 +1,120 @@
-# Portfolio
-![OscarHernandez-portfolio](https://github.com/user-attachments/assets/e284a42b-15c5-495c-99c7-ad5c1eb3bbe7)
-![Deploy Status](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)
+# 🌐 Personal Portfolio
 
----
+Welcome to my personal portfolio demo repository! This project is a demonstration of what a personal portfolio could look like. It showcases various aspects of web development, including my work, skills, and projects.
 
-[Demo](https://oscarhernandez.vercel.app/)
+- You can view the deployed project at the following URL: [https://sorolla.netlify.app/](https://sorolla.netlify.app/)
+- Astro web templates: https://astro.build/themes/details/sorollaportfolio/
 
-[Astro Themes](https://astro.build/themes/details/dark-minimal/)
+## 📂 Project Structure
 
-[ReactBits Showcase](https://www.reactbits.dev/showcase) 
+- **public/**: Contains public assets like images and fonts.
+- **src/**: Includes the source code for the portfolio.
+- **.gitignore**: Specifies files and directories to be ignored by Git.
+- **astro.config.mjs**: Configuration file for Astro.
+- **package.json**: Lists project dependencies and scripts.
+- **tailwind.config.mjs**: Configuration file for Tailwind CSS.
+- **tsconfig.json**: TypeScript configuration file.
 
-The component `<LetterGlitch \>` was taken from [ReactBits.dev](https://www.reactbits.dev/)
 
-## **Stack**  
-### **Frontend**  
-![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+### 🧭 /src structure
 
-### **Tools**  
-![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black)
-![Canva](https://img.shields.io/badge/Canva-c900c3?logo=canva&logoColor=white)
+The `/src` directory contains the main source code for the project. Below is an overview of its structure:
 
-### **Show your favorite Spotify album (or your own)** ![Spotify](https://img.shields.io/badge/Spotify-06cc1a?logo=spotify&logoColor=white)
-1. Choose your Spotify album
-2. Access the share options
-3. Select 'copy embed code'
 ```
-<iframe src="https://open.spotify.com/embed/album/ALBUM_ID" style="border-radius:12px border:0;" class="w-full h-40" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-```
-4. Insert the embed code on footer.astro
-
-That's it!
-
-## **Project structure**
-```
-public/
-└── svg/
-src/
-├── Components/
-|    ├── contact.astro
-|    ├── footer.astro
-|    ├── home.astro
-|    ├── logoWall.astro
-|    ├── nav.astro
-|    └── projects.astro
-├── layouts/
-|    └── Layout.astro
-├── React/
-|    ├── LetterGlitch.tsx
-|    ├── LikeButton.tsx
-|    └── SkillsList.tsx
-└── pages/
-     └── index.astro
-```
-
-## **Local configuration** 
-1. Clone the repo:  
-```
-git clone https://github.com/gothsec/portfolio
-```
-2. Install dependencies:
-```  
-npm install
-```
-3. Start the develpoment server:
-```  
-npm run dev
+src
+├── assets
+│   ├── adriana.jpg
+│   ├── euro.jpg
+│   ├── fran.jpg
+│   └── hero.png
+├── components
+│   ├── BaseHead.astro
+│   ├── Footer.astro
+│   ├── FormattedDate.astro
+│   ├── Header.astro
+│   ├── HeaderLink.astro
+│   ├── Hero.astro
+│   └── WhatIDo.astro
+├── consts.ts
+├── content
+│   └── blog
+│       └── content in markdown format
+├── content.config.ts
+├── icons
+│   ├── 1.svg
+│   ├── 2.svg
+│   ├── 3.svg
+│   ├── 4.svg
+│   ├── 5.svg
+│   ├── beach.svg
+│   ├── github.svg
+│   ├── linkedin.svg
+│   ├── paint.svg
+│   └── web.svg
+├── layouts
+│   └── BlogPost.astro
+├── pages
+│   ├── about.astro
+│   ├── blog
+│   │   ├── index.astro
+│   │   └── [...slug].astro
+│   ├── index.astro
+│   └── rss.xml.js
+└── styles
+    ├── global.css
+    └── hamburgers.css
 ```
 
-> **Important Notice:**  
-> This project is licensed under the [MIT License](https://opensource.org/licenses/mit).  
-> According to the license terms, any redistribution (including compiled or modified versions), you **must** retain the original copyright 
-> notice and the full license text. Copyright © 2025 Oscar Hernandez. All rights reserved.
+#### Explanation
+
+- **assets**: Contains image files used in the project.
+- **components**: Contains reusable UI components built with Astro.
+- **content**: Contains blog content in Markdown format.
+- **content.config.ts**: Configuration file for content collections.
+- **icons**: Contains SVG icon files used in the project.
+- **layouts**: Contains layout components.
+  - `BlogPost.astro`: Layout component for blog posts.
+- **pages**: Contains the main pages of the site.
+  - `blog/index.astro`: Blog index page.
+  - `blog/[...slug].astro`: Dynamic route for individual blog posts.
+- **styles**: Contains global and component-specific CSS files.
+  - `global.css`: Global styles for the project.
+  - `hamburgers.css`: Styles for the hamburger menu.
+
+This structure helps in organizing the project files and makes it easier to maintain and scale the project.
+
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/jramma/sorollaportfolio.git
+   cd sorollaportfolio
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   bun install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   bun dev
+   ```
+
+   The application will be available at `http://localhost:4321`.
+
+## 🛠️ Technologies Used
+
+- **Astro**: A modern static site builder.
+- **Tailwind CSS**: A utility-first CSS framework.
+- **TypeScript**: A statically typed programming language.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).

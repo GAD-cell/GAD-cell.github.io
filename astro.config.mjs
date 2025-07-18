@@ -1,9 +1,17 @@
-import { defineConfig } from 'astro/config'
+// @ts-check
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
-import react from "@astrojs/react";
+import icon from "astro-icon";
 
+import netlify from "@astrojs/netlify";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://gad-cell.github.io/',
-  integrations: [tailwind(), react()]
-})
+  output:'server',
+  integrations: [mdx(), sitemap(), tailwind(), icon()],
+  adapter: netlify(),
+});
